@@ -17,7 +17,7 @@ function AdminLogin(){
                         <span className="input-group-text"><i className="fa fa-user"></i>
                         </span>
                         <input type="email" id="form2Example11" name="email" className="form-control"
-                        placeholder="Email address" />
+                        placeholder="Email address"/>
                     </div>
                 </div>
                 <div className=""  style={{textAlign:"left"}}>
@@ -31,7 +31,7 @@ function AdminLogin(){
                 </div>
                 <div className="text-center pt-1 mb-1 pb-1">
                     
-                    <a className="btn btn-secondary btn-block mb-3" type="submit" href="AlumniHome">Log in</a>
+                    <a className="btn btn-secondary btn-block mb-3" type="submit" href="AdminHome">Log in</a>
                     {/* <button type="submit" value="AlumniHome" className="btn btn-secondary btn-block mb-3" >LogIn</button> */}
                     <br/>
                     <a className="text-muted" href="#!">Forgot password?</a>
