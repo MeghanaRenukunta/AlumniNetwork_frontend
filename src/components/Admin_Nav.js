@@ -28,10 +28,11 @@ function Admin_Nav(){
                     <li class="nav-item">
                         <a class="nav-link me-5" href="#Contact">Contact</a>
                     </li>
-                    <form class="d-flex" >
-                        <input class="form-control me-2" type="search" style={{width:"200px", placeholder:"Search", ariaLabel:"Search"}}/>
-                        <button type="submit"><i class="fa fa-search"></i></button>
-                    </form>
+                    <form class="form-inline d-flex justify-content-center md-form form-sm mt-0">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
+                    aria-label="Search"/>
+                </form>
                     <a href="Home" className="btn" id="logout">LogOut</a>
                 </ul>
             </div>

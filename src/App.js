@@ -17,8 +17,8 @@ import AboutUs from './components/AboutUs';
 import AdminLogin from './components/AdminLogin';
 import AdminRegister from './components/AdminRegister';
 import Search from './components/Search';
-import Directory from './components/Verify';
-import Verify from './components/Directory';
+import Verify from './components/Verify';
+import Directory from './components/Directory';
 import TestLogin from './components/TestLogin';
 
 
