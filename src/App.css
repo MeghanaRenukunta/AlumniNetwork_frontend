@@ -30,7 +30,8 @@ body{
   color:white;
   background-color:black;
   size: large;
-  margin: 3px;
+  /* margin: 3px; */
+  font-weight: inherit;
 }
 .card-body{
   background-color: rgb(226, 226, 227);
@@ -46,9 +47,11 @@ body{
 }
 input {
   height: 45px;
+  border: white;
 }
 .input-group-text{
   height: 45px;
+  border: white;
 }
 input:hover{
   color:gray;
@@ -69,7 +72,7 @@ outline: none;
 height: 40px;
 background-color: black;
 color: white; border-radius: 4px;
-font-weight: bold;
+font-weight: inherit;
 
 }
 .btn:hover{
@@ -285,3 +288,17 @@ table td {
   text-align: center;
 }
 
+.password-toggle{
+  background-color: white;
+  border: none;
+  border-left: white;
+
+}
+i {
+  margin: 10px;
+  color: #000000;
+  border: white;
+}
+#email.form-control{
+  background-color: white;
+}
