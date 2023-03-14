@@ -165,8 +165,8 @@ function Profile() {
   const [resume, setResume] = useState(null);
   const [showError, setShowError] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
-  const [showStatus, setRegisterStatus] = useState(false);
-  const [RegisterMessage, setRegisterMessage] = useState('');
+  const [showStatus, setProfileStatus] = useState(false);
+  const [ProfileMessage, setProfileMessage] = useState('');
 //   const [formData, setFormData] = useState({});
 
   const handleFirstNameChange = (event) => {
@@ -271,8 +271,8 @@ function Profile() {
     // localStorage.setItem('trade',data.trade)
 
     console.log('profile successful!')
-    setRegisterStatus(true);
-    setRegisterMessage(data.message)
+    setProfileStatus(true);
+    setProfileMessage(data.message)
 
     
   } 
@@ -298,10 +298,11 @@ catch (error) {
       <div className="card mx-auto" style={{ width: " 65% " }}>
         <div className="card-body">
           <form onSubmit={handleSubmit}>
+            
             <p>Full Name :</p>
             <div className="d-flex">
               <div className="mb-4 me-5">
-                <label htmlFor="firstname">First Name</label>
+                <label htmlFor="firstname" className="me-2">First Name</label>
                 <input
                   type="text"
                   id="firstname"
@@ -312,7 +313,7 @@ catch (error) {
                 />
               </div>
               <div className="mb-4">
-                <label htmlFor="last">Last Name</label>
+                <label htmlFor="last" className="me-2">Last Name</label>
                 <input
                   type="text"
                   id="last"
@@ -324,7 +325,7 @@ catch (error) {
                   </div>
                   </div>
                 <div className="mb-4">
-                <label htmlFor="roll">Roll No.</label>
+                <label htmlFor="roll" className="me-2">Roll No.</label>
                 <input
                 type="text"
                 id="roll"
@@ -335,13 +336,13 @@ catch (error) {
                 />
                 </div>
                 <div className="mb-4">
-                <label className="form-label" htmlFor="contact">
+                <label className="form-label me-2" htmlFor="contact">
                     Contact Details
                 </label>
                 <div className="input-group mb-4">
                 <span
                 className="input-group-text"
-                style={{ border: " 1px rgb(111, 109, 109) solid" }}
+                style={{ border: " 1px rgb(111, 109, 109) solid", height:"35px", padding:"1px" }}
                 ><i className="fa fa-phone"></i>
                 </span>
                 <input
@@ -349,8 +350,7 @@ catch (error) {
                 id="contact"
                 className="form-control"
                 style={{
-                    border: " 2px solid rgb(0, 0, 0)",
-                    margin: "2px 0",
+                    border: "1.5px solid rgb(0, 0, 0)",
                     padding: "5px",
                     borderRadius: "2px",
                 }}
@@ -363,13 +363,13 @@ catch (error) {
             </div>
 
             <div className="mb-4 ms-0">
-              <label className="form-label" htmlFor="form2Example11">
+              <label className="form-label me-2" htmlFor="form2Example11">
                 E-mail
               </label>
               <div className="input-group mb-4">
                 <span
                   className="input-group-text"
-                  style={{ border: " 1px rgb(111, 109, 109) solid" }}
+                  style={{ border: " 1px rgb(111, 109, 109) solid", height:"35px" ,padding:"1px" }}
                 >
                   <i className="fa fa-user"></i>
                 </span>
@@ -378,8 +378,7 @@ catch (error) {
                   id="form2Example11"
                   className="form-control"
                   style={{
-                    border: "2px solid rgb(0, 0, 0)",
-                    margin: "2px 0",
+                    border: "1.5px solid rgb(0, 0, 0)",
                     padding: "5px",
                     borderRadius: "2px",
                   }}
@@ -390,9 +389,13 @@ catch (error) {
               </div>
             </div>
             <div className="mb-4">
-            <label htmlFor="user">Address</label>
+            <label htmlFor="user" className="me-2">Address</label>
             <input type="text" 
-            id="user" placeholder="" 
+            id="user" 
+            style={{
+              border: "1.5px solid rgb(0, 0, 0)",
+            }}
+            placeholder="" 
             value={address} 
             onChange={handleAddressChange} 
             required />
@@ -400,10 +403,10 @@ catch (error) {
 
             <div className="d-flex">
             <div className="mb-4 me-5">
-                <label htmlFor="user">Branch</label>
+                <label htmlFor="user" className="me-2">Branch</label>
                 <select id="user" 
                 name="Branch" 
-                style={{border:"2px solid black",padding:"5px"}} 
+                style={{border:"1.5px solid black",padding:"5px"}} 
                 value={selectedBranch}
                  onChange={handleBranchChange}>
                 <option value=""></option>
@@ -413,12 +416,12 @@ catch (error) {
                 <option value="CSD">CSD</option>
                 </select>
             </div>
-            <div className="mb-4 ms-2">
-            <label htmlFor="course">Course</label>
+            <div className="mb-4 me-5">
+            <label htmlFor="course" className="me-2">Course</label>
             <select
                 id="course"
                 name="course"
-                style={{ border: "2px solid black", padding: "5px" }}
+                style={{ border: "1.5px solid black", padding: "5px" }}
                 value={course}
                 onChange={handleCourseChange}
             >
@@ -429,9 +432,9 @@ catch (error) {
                 <option value="Animation">Animation</option>
             </select>
             </div>
-            </div>
+           
             <div className="mb-4">
-                <label htmlFor="yog">Year of Graduation</label>
+                <label htmlFor="yog" className="me-2">Year of Graduation</label>
                 <input
                 type="number"
                 id="yog"
@@ -443,9 +446,9 @@ catch (error) {
                 onChange={handleYearOfGraduationChange}
                 />
             </div>
-
-        <div className="mb-4">
-            <label htmlFor="qual">Qualifications</label>
+            </div>
+        <div className="mb-4 d-flex">
+            <label htmlFor="qual" className="me-2">Qualifications</label>
             <input
             type="text"
             id="qual"
@@ -455,10 +458,10 @@ catch (error) {
             value={qualifications}
             onChange={handleQualificationsChange}
             />
-        </div>
+        
 
-        <div className="mb-4">
-            <label htmlFor="trade">Trade</label>
+        <div className="mb-4 ms-5">
+            <label htmlFor="trade" className="me-2">Trade</label>
             <input
             type="text"
             id="trade"
@@ -469,9 +472,10 @@ catch (error) {
             onChange={handleTradeChange}
             />
         </div>
+        </div>
 
-        <div className="mb-4">
-            <label htmlFor="langs">Languages</label>
+        <div className="mb-4 me-5 d-flex">
+            <label htmlFor="langs" className="me-2">Languages</label>
             <input
             type="text"
             id="langs"
@@ -481,10 +485,10 @@ catch (error) {
             value={languages}
             onChange={handleLanguagesChange}
             />
-        </div>
+        
 
-        <div className="mb-4">
-            <label htmlFor="exp">Experience</label>
+        <div className="mb-4 ms-5">
+            <label htmlFor="exp" className="me-2">Experience</label>
             <input
             type="number"
             id="exp"
@@ -496,9 +500,10 @@ catch (error) {
             onChange={handleExperienceChange}
             />
         </div>
+        </div>
 
-        <div className="mb-4">
-            <label htmlFor="com">Company</label>
+        <div className="mb-4 me-5 d-flex">
+            <label htmlFor="com" className="me-2">Company</label>
             <input
             type="text"
             id="com"
@@ -508,9 +513,9 @@ catch (error) {
             value={company}
             onChange={handleCompanyChange}
             />
-        </div>
-        <div className="mb-4">
-        <label htmlFor="stat">Present Status</label>
+        
+        <div className="mb-4 ms-5">
+        <label htmlFor="stat" className="me-2">Present Status</label>
         <input type="text" 
         id="stat"
         placeholder="" 
@@ -518,8 +523,9 @@ catch (error) {
         onChange={handlePresentStatusChange} 
         required/>
       </div>
+      </div>
       <div className="">
-        <label htmlFor="bio">About Yourself</label>
+        <label htmlFor="bio" className="me-2">About Yourself</label>
         <br/>
         <textarea id="bio" 
         name="bio" 
@@ -533,7 +539,7 @@ catch (error) {
       </div>
       <br/>
       <div className="">
-        <label htmlFor="myimg">Upload your profile:</label>
+        <label htmlFor="myimg"className="me-2">Upload your profile:</label>
         <input 
         type="file" 
         id="myimg" 
@@ -542,16 +548,17 @@ catch (error) {
       </div>
       <br/>
       <div className="">
-        <label htmlFor="myfile">Upload your resume:</label>
+        <label htmlFor="myfile"className="me-2">Upload your resume:</label>
         <input 
         type="file" 
         id="myfile" 
         name="myfile" 
         onChange={handleResumeChange}/>
       </div>
-      <div>
+      <br/>
+      <div className="text-center pt-1 mb-1 pb-1">
          <button type="submit" className="btn btn-primary" href="AlumniHome">
-            Log In
+            Create Profile
         </button>
         </div>
         <Modal show={showError} onHide={handleClose}>
@@ -570,7 +577,7 @@ catch (error) {
                 <Modal.Header closeButton>
                   <Modal.Title>{firstName}</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>{RegisterMessage}</Modal.Body>
+                <Modal.Body>{ProfileMessage}</Modal.Body>
                 <Modal.Footer>
                   <Button variant="secondary" onClick={home}>
                     Home

@@ -122,7 +122,7 @@ function App() {
       {/* <TestLogin/> */}
       <Header/>
       <Routes>
-          <Route path="/" element={<><Common_Nav/><br/><br/><Home/></>}/>
+          <Route path="/" element={<><Common_Nav/><br/><br/><CommonHome/></>}/>
           <Route path="about" element={<><Common_Nav/><br/><br/><AboutUs/></>}/>
           <Route path="home" element={<><Common_Nav/><br/><br/><CommonHome/></>}/>
           <Route path="events" element={<><Common_Nav/><br/><br/><Events/></>}/>
